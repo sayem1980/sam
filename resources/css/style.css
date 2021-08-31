@@ -1,0 +1,655 @@
+/*
+
+tamplate name : pual lamkin
+tamplate link : 
+authur : sayem
+authur url :
+version: 1.0
+description :
+
+*/
+
+/*===================
+
+css index
+------------
+0. google fonts
+1. common css
+2. reusable components
+3. hader
+4.about
+5. process
+6.expince
+7. work
+
+
+=====================*/
+
+/* common css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    padding: 120px 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    background-color: rgba(0, 0, 0, 0);
+    line-height: 1.5;
+    font-weight: 400;
+
+    
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+
+    
+}
+h1, h3, h4 {
+    color: #fff;
+}
+
+h3 {
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+}
+h4 { font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+
+}
+.about-description h4 {
+    color: black;
+}
+
+hr {
+    border: 0;
+    border-bottom: .1rem solid white;
+    margin: 3rem 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    margin: 1.5rem 0;
+}
+
+/* reusable components */
+
+.container {
+    max-width: 114rem;
+    margin: 0 auto;
+}
+
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.btn, 
+.btn:link,
+.btn:active {
+    text-decoration: none;
+    text-transform: capitalize;
+    background-color: black;
+    border: 0.1rem solid black;
+    color: #fff;
+    width: 20rem;
+    padding: 1rem 0;
+    display: inline-block;
+    text-align: center;
+    transition: all .1s;
+}
+
+.btn-full,
+.form-submit-btn {
+    background-color: #FF2B4A;
+    border-color:   #FF2B4A ;
+    color: white;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.btn-full:hover,
+.form-submit-btn:hover {
+    background-color: transparent;
+    color:  #FF2B4A ;
+}
+
+.section-title {
+    margin-bottom: 6rem;
+    text-align: center;
+}
+
+.section-title h2 {
+    font-size: 4rem;
+}
+
+/*==================
+ header section
+==================*/
+
+.hero{
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.589) url(img/hader.jpg) no-repeat center top / cover;
+    background-blend-mode: overlay;
+    position: relative;
+    overflow: hidden;
+    z-index: 9999;
+
+}
+
+#navbar {
+   
+    
+   
+    padding: 4.5rem 0;
+   
+}
+
+.logo-area {
+    float: left;
+    
+    
+}
+
+.menu-area  {
+    float: right;
+   
+}
+.menu-area a svg {
+    height: 4rem;
+    width: 4rem;
+    border: .1rem solid #fff;
+    
+}
+.hero-text-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+  
+.heading-primary-title {
+    font-size: 6.5rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    display: inline-block;
+
+}
+
+.heading-primary-title::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0.2rem;
+     background-color: white;
+}
+
+.heading-primary-title::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0.2rem;
+     background-color: white;
+}
+
+.heading-primary-subtitle {
+    display: block;
+    margin: 1rem;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.scroll-down {
+    text-align: center;
+}
+.scroll-down a { position: absolute;
+    bottom: 4rem;
+    color: #fff;
+}
+
+.scroll-down a svg {
+    position: absolute;
+    bottom: 4rem;
+    color: #fff;
+    position: relative;
+    animation: arrow 2s infinite ease-in-out;
+}
+.scroll-down a svg:hover {
+    color: turquoise;
+}
+
+    
+
+/*=====hamburger manu=====*/
+
+.manu-containe{
+background-color: rgb(0, 0, 0);
+height: 100vh;
+width: 0%;
+position: fixed;
+top: 0;
+left: 0;
+overflow: hidden;
+z-index: 9999;
+}
+
+.hb-manu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+}
+
+.hb-manu li a{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin: 1rem 0;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.hb-manu li a:hover {
+    color: red;
+}
+
+.close-btn a ion-icon {
+    color: #fff;
+    font-size: 4rem;
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+
+}  
+.close-btn a ion-icon:hover{
+    color: red;
+}
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -999;
+}
+
+/*==================
+about section
+==================*/
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 6rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.about-grid-item img {
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+.about-description .paul {
+    font-size:  1.8rem;
+    font-weight: 700;
+    margin-right: 4rem;
+}
+
+.btn-full {
+    background-color: #FF2B4A;
+    border-color:   #FF2B4A ;
+    color: white;
+    margin-top: 2rem;
+}
+
+.btn-full:hover{
+    background-color: white;
+    color:  #FF2B4A ;
+}
+
+/*==================
+process section
+==================*/
+
+.process{
+    background: rgba(0, 0, 0, 0.062);
+    text-align: center ;
+}
+.process-grid {
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    grid-gap: 1.5rem;
+
+}
+
+.process-grid-item{
+    background-color: black;
+    color: white;
+    padding: 8.5rem ;
+    line-height: 1rem;
+}
+
+.process-grid-item ion-icon {
+    font-size: 4.5rem;
+    margin-bottom: .5rem;
+}
+
+.process-grid-item {
+    text-transform: uppercase;
+}
+
+
+.process-grid-item:nth-child(1){
+    background-color: #10c6fc;
+}
+.process-grid-item:nth-child(2){
+    background-color: #835aeb;
+}
+.process-grid-item:nth-child(3){
+    background-color: #002453;
+}
+.process-grid-item:nth-child(4){
+    background-color: #ff2b4a;
+}
+
+
+
+
+/*==================
+
+expince section
+
+==================*/
+
+.experience {
+    background:rgba(0, 0, 0, 0.24) url(img/pc.jpg) no-repeat center top / cover fixed;
+    background-blend-mode: overlay;
+   
+}
+
+.exp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.5rem;
+} 
+
+
+.exp-grid-item {
+    background-color: rgba(0, 0, 0, 0.507);
+    color: white;
+    padding: 4rem  3rem;
+  
+}
+
+
+/*==================
+
+Latest work section
+
+==================*/
+
+.work-filter {
+    text-align: center;
+    margin-bottom: 6rem;
+
+}
+
+.work-filter button {
+    background-color: black;
+    color: white;
+    border: .1rem solid black;
+    text-transform: capitalize;
+    padding: .5rem 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
+  
+}
+
+.work-grid-item {
+    height: 24rem;
+
+}
+
+.work-grid-item img {
+    width: 100%;
+    height: 100%;
+}
+
+.work-grid-item:nth-child(5) {
+    grid-column: 1/3;
+}
+
+/* mixitup*/
+
+.work-filter .mixitup-control-active {
+    background: #FF2B4A;
+    border-color: #FF2B4A;
+}
+
+/*==================
+
+cretive section
+
+==================*/
+
+.cretive {
+    background:rgba(0, 0, 0, 0.24) url(img/testimonial.jpg) no-repeat center top / cover ;
+    
+   
+}
+.cretive h4 {
+ margin-top: 0;
+     font-weight: 700;
+}
+
+
+.cretive-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.5rem;
+} 
+
+.cretive-gird-item h4 {
+    color: #222;
+
+}
+
+.ceavite-photo img {
+    height: 4rem; 
+    margin-bottom: 2.2rem;
+    
+
+}
+
+.sing img {
+    height: 4.5rem; 
+    max-width: 100%;
+   box-sizing: border-box;
+   margin-bottom: 1.5rem;
+
+}
+
+
+/*==================
+
+cretive section
+
+==================*/
+
+
+/*==================
+
+Leave a message
+
+==================*/
+
+#message { background: url(img/contact.jpg) no-repeat center top / cover fixed;
+
+}
+
+.ct-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1.5rem;
+    color: white;
+
+}
+.ct-grid-item:nth-child(1),
+
+.nasted-ct-grid-item {
+    background-color: rgba(0, 0, 0, 0.836);
+    padding: 2rem 3.5rem;
+}
+.ct-grid-item h3 {
+    text-transform: uppercase;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    margin: 1rem 0;
+    background: transparent;
+    border: .1rem solid #fff;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    font-size: 1.6rem;
+    
+}
+form textarea {
+    font-family: 'Roboto', sans-serif;
+    height: 20rem;
+}
+
+.form-submit {
+    text-align: right;
+    margin: 3rem 0;
+}
+
+.nasted-ct-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+}
+
+
+/*==================
+
+Leave a message
+
+==================*/
+
+
+/*==================
+
+footer
+
+==================*/
+
+
+
+footer {
+    background-color: #222222;
+    padding: 4rem 0;
+    text-align: center;
+    color: white;
+} 
+.social-icon{
+    margin-bottom: 1.5rem;
+}
+
+.social-icon ul li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+.social-icon ul li a{
+    text-decoration: none;
+}
+
+
+.social-icon ul li a ion-icon {
+    color: white;
+    border-right: .1rem solid #fff ;
+    padding: 0 1rem ;
+    font-size: 2rem;
+
+}
+
+.social-icon ul li a ion-icon:hover {
+
+    color:#FF3452;
+
+}
+
+.scrolltop {
+    margin-top: 1.5rem;
+}
+
+
+/*==================
+
+ end footer
+
+==================*/
+
+/*sticy*/
+nav.uk-sticky-fixed {
+    top: 0 !important;
+    background-color: black;
+    padding: 0 1rem ;
+    
+}
+
+#navbar.uk-sticky-fixed{
+    padding:  1.5rem 0 ;
+}
+
+/*animation*/
+@keyframes arrow {
+0%{ 
+    top: 1rem;
+    }
+    75% {
+    top:3.2rem;
+    }
+    100% {
+    top:1rem;
+    }
+}
